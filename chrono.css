@@ -1,0 +1,71 @@
+body{
+    font-family: 'Mohave', sans-serif;}
+.chrono{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+
+}
+.chrono p{
+    font-size: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transform: translateY(-70px);
+}
+
+.chrono span{
+width: 190px;
+margin-top: 150px;
+padding: 0px;
+font-size: 200px;
+border: none;
+font-family: 'Mohave', sans-serif;
+
+}
+
+input:focus-visible{
+    border: 0;
+    outline : 0;
+}
+.chrono__buttons{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+button{
+    font-family: 'Mohave', sans-serif;
+    font-size: 30px;
+    padding: 20px 40px;
+    margin: 0 5px;
+    color: white;
+    border: none;
+    
+}
+.start_stop{
+    background-color: #59b87e;
+    cursor: pointer;
+}
+.reset{
+    background-color: #fbb629;
+    cursor: pointer;
+
+}
+
+.change_hours{
+    display: flex;
+    justify-content: center
+}
+input{
+    width : 55px;
+    font-family : 'Mohave', sans-serif;
+    font-size: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    
+}
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }

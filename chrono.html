@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styleSheet" href="chrono.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chrono</title>
+  </head>
+  <body>
+
+    <div class="chrono">
+
+      <span id="hours">00</span>
+      <p>:</p>
+      <span id="minutes">00</span>
+      
+    </div>
+    <div class="chrono__buttons">
+      <button onclick="startStop()" class="start_stop">start</button>
+      <button class="reset" onclick="reset()">reset</button>
+    </div>
+    <div class="change_hours">
+        <input type="number" id="setHours" max="99" placeholder="HH"/>
+
+    </div>
+    <script src="chrono.js"></script>
+  </body>
+</html>
