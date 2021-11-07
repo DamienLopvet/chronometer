@@ -73,6 +73,7 @@ function timer() {
 
   document.getElementById("minutes").innerHTML = minOut;
   document.getElementById("hours").innerHTML = hourOut;
+  document.getElementById("secondes").innerHTML = secOut
 document.querySelector('#setHours').innerHTML = hourOut;
 }
 
@@ -99,6 +100,7 @@ function reset() {
 
   document.getElementById("minutes").innerHTML = "00";
   document.getElementById("hours").innerHTML = "00";
+  document.getElementById("hours").innerHTML = "00"
   
 }
 
