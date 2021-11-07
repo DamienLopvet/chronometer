@@ -70,11 +70,10 @@ function timer() {
   }
 
 
-  document.getElementById("sec").innerHTML = secOut;
 
   document.getElementById("minutes").innerHTML = minOut;
   document.getElementById("hours").innerHTML = hourOut;
-
+document.querySelector('#setHours').innerHTML = hourOut;
 }
 
 
@@ -98,7 +97,6 @@ function reset() {
   min = 0
   hour = 0;
 
-  document.getElementById("sec").innerHTML = "00";
   document.getElementById("minutes").innerHTML = "00";
   document.getElementById("hours").innerHTML = "00";
   
@@ -107,6 +105,7 @@ function reset() {
 document.querySelector("#setHours").addEventListener("input", ()=>{
   
   newHour = document.querySelector("#setHours").value
-  hour = newHour
+  if(newHour.toString().length < 3){
+  hour = newHour}
   console.log(newHour)
 })
