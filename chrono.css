@@ -1,75 +1,91 @@
-body{
-    font-family: 'Mohave', sans-serif;}
-.chrono{
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    height: 400px;
-    position: relative;
-
+body {
+  font-family: "Mohave", sans-serif;
 }
-.chrono p{
-    font-size: 200px;
-    margin-left: 15px;
-    margin-right: 15px;
-    transform: translateY(-70px);
+.chrono {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 400px;
+  position: relative;
 }
-
-.chrono span{
-width: 190px;
-margin-top: 150px;
-padding: 0px;
-font-size: 200px;
-border: none;
-font-family: 'Mohave', sans-serif;
-
-}
-#secondes{
-    opacity: 0.09;
+.chrono p {
+  font-size: 200px;
+  margin-left: 15px;
+  margin-right: 15px;
+  transform: translateY(-70px);
 }
 
-input:focus-visible{
-    border: 0;
-    outline : 0;
+.chrono span {
+  width: 190px;
+  margin-top: 150px;
+  padding: 0px;
+  font-size: 200px;
+  border: none;
+  font-family: "Mohave", sans-serif;
+  overflow: hidden;
 }
-.chrono__buttons{
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-button{
-    font-family: 'Mohave', sans-serif;
-    font-size: 30px;
-    padding: 20px 40px;
-    margin: 0 5px;
-    color: white;
-    border: none;
-    
-}
-.start_stop{
-    background-color: #59b87e;
-    cursor: pointer;
-}
-.reset{
-    background-color: #fbb629;
-    cursor: pointer;
-
+#secondes {
+  opacity: 0.09;
 }
 
-.change_time{
-    display: flex;
-    justify-content: center
+input:focus-visible {
+  border: 0;
+  outline: 0;
 }
-input{
-    width : 55px;
-    font-family : 'Mohave', sans-serif;
-    font-size: 50px;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 20px;
-    
+.chrono__buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 }
-input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
+button {
+  font-family: "Mohave", sans-serif;
+  font-size: 30px;
+  padding: 20px 40px;
+  margin: 0 5px;
+  color: white;
+  border: none;
+}
+.start_stop {
+  background-color: #59b87e;
+  cursor: pointer;
+}
+.reset {
+  background-color: #fbb629;
+  cursor: pointer;
+}
+
+.change_time {
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 55px;
+  font-family: "Mohave", sans-serif;
+  font-size: 50px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+@media only screen and (max-width: 760px) {
+  .chrono{
+      height: 290px;
   }
-  
+    .chrono span {
+    font-size: 100px;
+    width: 100px;
+  }
+  .chrono p {
+    font-size: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: translateY(40px);
+  }
+  input{
+      font-size: 30px;
+      width: 35px
+  }
+
+}
