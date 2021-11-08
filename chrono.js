@@ -9,9 +9,11 @@ function startStop() {
     start();
     document.querySelector(".start_stop").innerHTML = "Stop";
     document.querySelector(".start_stop").style.backgroundColor = "#EF6262";
+    document.querySelector(".start_stop").style.borderRadius = "5px";
   } else if (startstop === 2) {
     document.querySelector(".start_stop").innerHTML = "Start";
     document.querySelector(".start_stop").style.backgroundColor = "#59b87e";
+    document.querySelector(".start_stop").style.borderRadius = "0px";
     startstop = 0;
     stop();
   }
@@ -21,8 +23,8 @@ function start() {
   if (!x) {
     startedAt = Date.now();
     x = setInterval(timer, 10);
-  }else {
-    startedAt = Date.now()- milisec
+  } else {
+    startedAt = Date.now() - milisec;
     x = setInterval(timer, 10);
   }
 } /* Start */
@@ -51,7 +53,7 @@ function timer() {
   /* Main Timer */
 
   milisec = Date.now() - startedAt;
-   second = Math.floor(milisec / 1000);
+  second = Math.floor(milisec / 1000);
   hour = Math.floor(second / 3600);
   min = Math.floor((second - hour * 3600) / 60);
   sec = second - hour * 3600 - min * 60;
@@ -90,9 +92,9 @@ function reset() {
 document.querySelector("#setHours").addEventListener("change", () => {
   newHour = document.querySelector("#setHours").value;
   hour = startedAt - newHour * 3600000;
-  if(hour > Date.now()){
+  if (hour > Date.now()) {
     document.querySelector("#setHours").value = "";
-    return
+    return;
   }
   startedAt = hour;
   document.querySelector("#setHours").value = "";
@@ -100,12 +102,16 @@ document.querySelector("#setHours").addEventListener("change", () => {
 document.querySelector("#setMinutes").addEventListener("change", () => {
   newMinutes = document.querySelector("#setMinutes").value;
   minute = startedAt - newMinutes * 60000;
-  
+
   if (minute > Date.now()) {
-    
     document.querySelector("#setMinutes").value = "";
     return;
   }
   startedAt = minute;
   document.querySelector("#setMinutes").value = "";
 });
+document.body.onkeyup = function (e) {
+  if (e.keyCode == 32) {
+    startStop();
+  }
+};
