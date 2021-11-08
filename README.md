@@ -1,7 +1,7 @@
 <h1>chronometer</h1>
 
 <strong>This is a stopWatch with an option to modificate values</strong><br>
-<a href="https://damienlopvet.github.io/chronometer/>"<img src="img/SharedScreenshot.jpg" width="500"></a>
+<a href="https://damienlopvet.github.io/chronometer/"><img src="img/SharedScreenshot.jpg" width="500"></a>
 <h2> Scenario </h2>
 <p>Sometimes you want to know how long you have been working.<br>
 <strong>Using a stopWatch </strong>can be tricky because when you forget to stop it when you're done, it keep on running !!<br>
