@@ -1,4 +1,4 @@
-
+(window.onload = setTimer())
 var startstop = 0;
 var x;
 function startStop() {
@@ -49,6 +49,20 @@ function timer() {
   /* Main Timer */
 
   milisec = Date.now() - startedAt;
+  second = Math.floor(milisec / 1000);
+  hour = Math.floor(second / 3600);
+  min = Math.floor((second - hour * 3600) / 60);
+  sec = second - hour * 3600 - min * 60;
+  secOut = checkTime(sec);
+  minOut = checkTime(min);
+  hourOut = checkTime(hour);
+  document.getElementById("minutes").innerHTML = minOut;
+  document.getElementById("hours").innerHTML = hourOut;
+  document.getElementById("secondes").innerHTML = secOut;
+  document.querySelector("#setHours").innerHTML = hourOut;
+}
+function setTimer(){
+  let milisec = JSON.parse(localStorage.getItem("time"));
   second = Math.floor(milisec / 1000);
   hour = Math.floor(second / 3600);
   min = Math.floor((second - hour * 3600) / 60);
