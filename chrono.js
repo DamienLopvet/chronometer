@@ -1,3 +1,4 @@
+
 var startstop = 0;
 var x;
 function startStop() {
@@ -20,20 +21,14 @@ function startStop() {
 }
 
 function start() {
-  let milisec = JSON.parse(localStorage.getItem("time"))
-    startedAt = Date.now() - milisec;
-    x = setInterval(timer, 100);
-  
+  let milisec = JSON.parse(localStorage.getItem("time"));
+  startedAt = Date.now() - milisec;
+  x = setInterval(timer, 100);
 } /* Start */
 
 function stop() {
-  
-    clearInterval(x);
-    localStorage.setItem("time", JSON.stringify(milisec))
-
-    
-
-  
+  clearInterval(x);
+  localStorage.setItem("time", JSON.stringify(milisec));
 } /* Stop */
 
 var milisec = 0;
@@ -114,4 +109,7 @@ document.body.onkeyup = function (e) {
   if (e.keyCode == 32) {
     startStop();
   }
+};
+window.onbeforeunload = function () {
+  localStorage.setItem("time", JSON.stringify(milisec));
 };
