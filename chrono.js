@@ -20,19 +20,20 @@ function startStop() {
 }
 
 function start() {
-  if (!x) {
-    startedAt = Date.now();
-    x = setInterval(timer, 10);
-  } else {
+  let milisec = JSON.parse(localStorage.getItem("time"))
     startedAt = Date.now() - milisec;
-    x = setInterval(timer, 10);
-  }
+    x = setInterval(timer, 100);
+  
 } /* Start */
 
 function stop() {
-  if (x) {
+  
     clearInterval(x);
-  }
+    localStorage.setItem("time", JSON.stringify(milisec))
+
+    
+
+  
 } /* Stop */
 
 var milisec = 0;
@@ -77,6 +78,7 @@ function checkTime(i) {
 
 function reset() {
   /*Reset*/
+  localStorage.clear();
 
   milisec = 0;
   sec = 0;
@@ -84,8 +86,6 @@ function reset() {
   hour = 0;
   document.getElementById("secondes").innerHTML = "00";
   document.getElementById("minutes").innerHTML = "00";
-  document.getElementById("hours").innerHTML = "00";
-
   document.getElementById("hours").innerHTML = "00";
 }
 
